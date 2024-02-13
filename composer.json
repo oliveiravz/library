@@ -1,0 +1,20 @@
+{
+    "name": "jaovi/library",
+    "require": {
+        "symfony/var-dumper": "^6.0",
+        "league/plates": "^3.5",
+        "vlucas/phpdotenv": "^5.6",
+        "ramsey/uuid": "^4.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "João Victor",
+            "email": "49462692+oliveiravz@users.noreply.github.com"
+        }
+    ]
+}
