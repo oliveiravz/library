@@ -3,7 +3,7 @@ namespace app\controllers;
 
 class NotFoundController extends Controller 
 {
-    public function index() {
-        $this->view('notFound', ['title' => 'Página não econtrada']);
-    }
+    protected string $view = "notFound";
+    protected string $title = "Página não encontrada";
+    
 }

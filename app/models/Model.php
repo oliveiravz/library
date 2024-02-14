@@ -31,7 +31,7 @@ abstract class Model
 
             return $stmt->fetchAll();
         } catch (\PDOException $e) {
-            dd($e->getMessage());
+            throw new \Exception("Error: " .$e->getMessage());
         }
     }
 
@@ -41,7 +41,6 @@ abstract class Model
             $data["id"] = Uuid::uuid4()->toString();
 
             $sql = "INSERT INTO {$this->table}(".implode(',', array_keys($data)).") VALUE (:".implode(",:", array_keys($data)).")";
-            
             $connection = new Connection();
             $pdo = $connection->getPdo();
 
@@ -49,7 +48,7 @@ abstract class Model
             
             return $stmt->execute($data);
         } catch (\PDOException $e) {
-            dd($e->getMessage());
+            throw new \Exception("Error: " .$e->getMessage());
         }
     }
 

@@ -5,9 +5,8 @@ use app\models\Book;
 
 class BookController extends Controller
 {
-    public function index(array $books = []) {
-        $this->view('book', ['title' => 'Livros', "books" => $books]);
-    }
+    protected string $view = "book";
+    protected string $title = "Livros";
 
     public function getAll() {
         $getAll = new Book();

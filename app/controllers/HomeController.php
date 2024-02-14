@@ -5,7 +5,12 @@ use app\controllers\Controller;
 
 class HomeController extends Controller
 {    
-    public function index() {
-        $this->view('home', ['title' => 'Biblioteca']);
+    protected string $view = "home";
+    protected string $title = "Biblioteca";
+
+    public function getAll() {
+        $data = [];
+
+        return $data;
     }
 }
