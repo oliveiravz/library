@@ -14,8 +14,8 @@ abstract class Controller
         if(!is_string($message)) {
             $message = "";
         }
-
-        $this->view($this->view, ['title' => $this->title, "data" => $data]);
+        
+        $this->view($this->view, ['title' => $this->title, "data" => $data], $message);
     }
 
     protected function view(string $view, array $data = []) {

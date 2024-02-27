@@ -22,7 +22,7 @@ $this->layout(
             <label for="category">Livro</label>
             <select class="custom-select" name="book" id="book">
                 <option selected>Selecione</option>
-                <?php foreach ($books as $key => $book) { ?>
+                <?php foreach ($data as $key => $book) { ?>
                     <option value="<?=$book['id']?>"><?=$book['name']?></option>
                 <?php } ?>
             </select>

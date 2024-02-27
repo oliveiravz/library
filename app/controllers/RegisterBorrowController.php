@@ -3,6 +3,7 @@ namespace app\controllers;
 
 use app\controllers\Controller;
 use app\core\Request;
+use app\models\Book;
 use app\models\Borrow;
 
 class RegisterBorrowController extends Controller
@@ -30,8 +31,10 @@ class RegisterBorrowController extends Controller
     }
 
     public function getAll() {
-        $data = [];
-
-        return $data;
+        $getAll = new Book();
+        
+        $books = $getAll->fetchAll();
+        dd($books);
+        $this->index($books);
     }
 }

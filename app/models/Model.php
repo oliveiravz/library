@@ -53,7 +53,13 @@ abstract class Model
     }
 
     
-    public function getByOne() {
+    // public function findBy(array $data) {
 
-    }
+    //     try {
+    //         $sql = "SELECT ".implode(',',array_keys($data))." FROM {$this->table} WHERE ";
+    //         dd($sql);
+    //     } catch (\Throwable $th) {
+    //         //throw $th;
+    //     }
+    // }
 }
